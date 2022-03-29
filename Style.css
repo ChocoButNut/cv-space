@@ -1,0 +1,321 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(to right,
+  hsl(213, 29%, 5%), hsl(214, 100%, 10%));
+  font-size: 16px;
+  color: #ECECEC;
+  text-align: center;
+  line-height: 1.8;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+h1{
+  font-family: 'Merriweather', serif;
+  font-size: 5rem;
+  color: #4D77FF;
+
+  animation: Moveinleft;
+  animation-duration: 2s;
+  
+}
+
+h3{
+  font-size: 2.5rem;
+  font-family: 'Merriweather', serif;
+}
+
+.container--items{
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 30%;
+
+  animation: Movein;
+  animation-duration: 2s;
+}
+
+
+hr{
+  border-top: 5px;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+  border-style: dotted;
+  width: 10%;
+  margin: auto;
+}
+
+
+.Choco{
+  margin-left: 20px;
+   animation: Rotationanimation ;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+}
+
+
+
+
+/* Header */
+
+.container{
+  
+  color: #ECECEC;
+  background: url(images/background-home-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+  height: 80vh;
+  width: 97%;
+}
+
+   /* navbar*/
+
+   .navbar{
+    font-size: 1.1rem;
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  .logo{
+    margin-left: 20px;
+    border-radius: 50%;
+    width: 30px;
+   
+    background-color: #3A3845;
+    margin: 0;
+  }
+  
+  .navbar, ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar, a{
+    color: #ECECEC;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  
+  .navbar, a:hover{
+    color: #4D96FF;
+    transition: 1s;
+    cursor: pointer;
+  }
+  
+/* Section */
+
+.Container--box{
+  width: 70%;
+  margin: 100px auto;
+  /*
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-gap: 30px; */
+}
+
+h3, p{
+  margin: 20px auto;
+}
+
+.earth{
+  float: left;
+  margin-right: 50px;
+  animation: Movein;
+  animation-duration: 2s;
+}
+
+.Container--box--text1{
+  clear: both;
+  text-align: left;
+}
+
+.sun{
+  float: right;
+  margin-left: 50px;
+  animation: Moveinright;
+  animation-duration: 2s;
+}
+
+.Container--box--text2{
+  clear: both;
+  text-align: left;
+}
+
+
+
+
+.earth, .sun{
+  width: 300px;
+  margin-bottom: 50px ;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #3A3845;
+
+}
+
+ /* Fire Phome */
+
+.phone{
+  width: 50%;
+  margin: auto;
+  position: relative;
+  display: block;
+}
+.smartphone{
+  width: 60%;
+  margin: 0;
+}
+
+.fire{
+  border: none;
+  position: absolute;
+  width: 30%;
+  left: 35%;
+  top: 25%;
+  text-shadow: 0 0 30px #3A3845;
+}
+
+
+
+
+
+
+
+
+@keyframes Movein {
+
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  50%{
+    transform: rotateX(90px);
+    opacity: 0.5;
+  }
+
+  80%{
+    transform: rotateX(80);
+    color: #C1F4C5;
+    opacity: 0.8
+  }
+
+  100%{
+    transform: rotateX(0);
+    color: #ECECEC;
+    opacity: 1
+  }
+}
+
+@keyframes Moveinright {
+
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  50%{
+    transform: rotateY(90px);
+    opacity: 0.5;
+  }
+
+  100%{
+    transform: rotateY(0);
+    color: #C1F4C5;
+    opacity: 1
+  }
+
+}
+
+
+   /* this is for SPACE animation */
+@keyframes Moveinleft {
+  0%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  50%{
+    transform: translateX(40px);
+    color: white;
+    opacity: 0.5
+  }
+
+  100%{
+    transition: translateY(0);
+    color: #5463FF;
+    opacity: 1;
+ }
+}
+
+
+
+
+
+@keyframes Rotationanimation {
+  100%{transform: rotateX(360deg);}
+}
+
+
+@media screen and (max-width: 720px){
+  body{
+    text-align: center;
+  }
+  h1{
+    font-size: 2.6rem;
+  }
+
+  .container{
+    width: 100%;
+  }
+  
+  .container--items{
+    margin: 60px auto 0 auto;
+  }
+
+  h3{
+    content: '';
+    clear: both;
+  }
+  
+  .container--image{
+    width: 100%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logo{
+   width: 20px;
+  }
+
+  .navbar{
+    padding-right: 0;
+    flex-direction: column;
+  }
+
+  ul{
+    margin: auto;
+    width: 30%;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  li{
+    border-bottom: 1px solid;
+  }
+
+  li, a{
+    margin-bottom: 10px;
+  }
+}

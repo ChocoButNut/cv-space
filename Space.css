@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto;
+    width: 100%;
+    line-height: 1.7;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url(images/destination/background-destination-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    color: #ECECEC;
+}
+
+h1{
+    margin-top: 60px;
+    margin-left: 50px;
+    font-size: 3rem;
+    font-family: 'Merriweather', serif;
+
+    animation: Moveinleft;
+    animation-duration: 2s;
+}
+
+h2{
+    font-size: 6rem;
+    font-family: 'Merriweather', serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+.logo{
+    margin-left: 20px;
+    background-image: url(images/destination/background-destination-mobile.jpg);
+    width: 25px;
+    border-radius: 50%;
+}
+
+/*  NAVBAR */
+
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+.navbar{
+    font-size: 1.1rem;
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  .logo{
+    margin-left: 20px;
+    border-radius: 50%;
+    width: 30px;
+   
+    background-color: #3A3845;
+    margin: 0;
+  }
+  
+  .navbar, ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar, a{
+    color: #ECECEC;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  
+  .navbar, a:hover{
+    color: #4D96FF;
+    transition: 1s;
+    cursor: pointer;
+  }
+  
+
+
+  /* CONTAINER */
+
+
+
+.Container--items{
+    flex-basis: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    justify-content: space-around;
+}  
+
+.Container--items--inner{
+    width: 50%;
+}
+
+img{
+    width: 500px;
+    margin-right: 20px;
+}
+
+
+
+
+
+/* ANIMATION  */
+
+@keyframes Moveinleft {
+    0%{
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  
+    50%{
+      transform: translateX(40px);
+      color: #3A3845;
+      opacity: 0.5
+    }
+  
+    100%{
+      transition: translateY(0);
+      color: #ECECEC;
+      opacity: 1;
+   }
+  }
+
+
+
+
+  @media screen and (max-width: 760px){
+      body{
+          text-align: center;
+        padding: 0;
+        width: 100%;
+        background-image: url(images/technology/background-technology-mobile.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }  
+      
+      .logo{
+           margin-left: 0;
+      }
+      
+      img{
+          width: 100%;
+      }
+
+      .logo{
+        margin-left: 10px;
+       width: 20px;
+      }
+    
+      .navbar{
+        padding-right: 0;
+        flex-direction: column;
+      }
+    
+      ul{
+        margin: auto;
+        width: 30%;
+        padding: 0;
+        flex-direction: column;
+      }
+    
+      li{
+        border-bottom: 1px solid;
+      }
+    
+      li, a{
+        margin-bottom: 10px;
+      }
+
+      .content--box{
+          text-align: left;
+      }
+  }
